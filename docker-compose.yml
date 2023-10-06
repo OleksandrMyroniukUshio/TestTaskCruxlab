@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  passwordchecker-backend:
+    build:
+      context: ./PasswordCheckerBackend
+      dockerfile: Dockerfile
+    ports:
+      - "7202:80"
+
+  passwordchecker-frontend:
+    build:
+      context: ./PasswordCheckerFrontend
+      dockerfile: Dockerfile
+    ports:
+      - "4200:80"
